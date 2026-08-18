@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class StudentEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter fees paid (1 for Yes, 0 for No): ");
+        int fees = sc.nextInt();
+
+        System.out.print("Enter attendance percentage: ");
+        double attendance = sc.nextDouble();
+
+        if (fees == 1) {
+            if (attendance >= 75) {
+                System.out.println("Student is eligible to write the exam.");
+            } else {
+                System.out.println("Student is not eligible due to low attendance.");
+            }
+        } else {
+            System.out.println("Student is not eligible because fees are not paid.");
+        }
+
+        sc.close();
+    }
+}
